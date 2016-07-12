@@ -16,7 +16,7 @@ contract Bank {
     }
     
     function transfer(address to, uint256 value) {
-        if (balance[msg.sender] < vaue) throw;
+        if (balance[msg.sender] < value) throw;
         if (balance[to] + value < balance[to]) throw;
         balance[msg.sender] -= value;
         balance[to] += value;
